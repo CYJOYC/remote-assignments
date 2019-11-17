@@ -69,5 +69,5 @@ ClosemenuDOM.addEventListener('click', () => {
 // Assigment 4 - Request 3
 const ActionDom = document.querySelector('.button')
 ActionDom.addEventListener('click', () => {
-    document.querySelector('.hidden').classList.remove('hidden')
+    document.querySelector('#more').classList.remove('hidden')
 })
