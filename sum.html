@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>SUM</title>
+
+</head>
+
+<body>
+
+  <div id="demo">
+  <h1>Try input a number</h1>
+  <form name="form" id="form">Right Here：
+    <input type="text" name="number_forurl" id="number_forurl">
+    <input type="submit" value="Go!" data-type="submit">
+  </form>
+  </div>
+
+<script>
+  const knowclick = document.querySelector('[data-type="submit"]');
+  knowclick.addEventListener("click", loadDoc);
+  
+  function loadDoc(){
+    var numberForUrl = document.querySelector("#number_forurl");
+    console.log(numberForUrl);
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", 'http://localhost:3000/getData?number=' + numberForUrl, true);
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState === 4 && xhr.status == 200){
+          var content = document.getElementsByTagName('h2').innerHTML = xhr.responseText;
+         
+
+      }; 
+  };
+    xhr.send();
+   
+};
+
+
+</script>
+
+
+</body>
+</html>
