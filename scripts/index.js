@@ -1,6 +1,6 @@
 // Assignment 1: Function and Array
 function max(...numbers) {
-    if (numbers.lenght === 0) {
+    if (numbers.length === 0) {
         return
     }
 
@@ -34,7 +34,7 @@ let args2 = {
 function avg(data) {
     const { products } = data
     
-    if (products.lenght === 0) {
+    if (products.length === 0) {
         return 
     }
 
@@ -46,6 +46,7 @@ function avg(data) {
 
     return sum / data.size
 }
+
 
 // Assigment 4 - Request 1
 
